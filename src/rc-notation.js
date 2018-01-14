@@ -18,7 +18,7 @@ var resistorExponents = {
 }
 
 function toRCNotation(num, isCapacitor) {
-  var exponent, letter, mantisa
+  var exponent, letter, mantissa
   num = Number(num)
   if (isNaN(num)) {
     return ''
@@ -27,17 +27,17 @@ function toRCNotation(num, isCapacitor) {
   exponent = Math.floor(Math.log10(num) / 3) * 3
   if (exponent < -12) exponent = -12
   if (exponent > 12) exponent = 12
-  mantisa = parseFloat((num * Math.pow(10, -exponent)).toFixed(3)) //parsefloat removes trailing zeroes
+  mantissa = parseFloat((num * Math.pow(10, -exponent)).toFixed(3)) //parseFloat removes trailing zeroes
 
   if (exponent < -3) isCapacitor = true
   letter = isCapacitor
     ? capacitorExponents[exponent]
     : resistorExponents[exponent]
 
-  if (mantisa % 1) {
-    return mantisa.toString().replace('.', letter)
+  if (mantissa % 1) {
+    return mantissa.toString().replace('.', letter)
   } else {
-    return mantisa + letter
+    return mantissa + letter
   }
 }
 
