@@ -24,6 +24,10 @@ function toRCNotation(num, isCapacitor) {
     return ''
   }
 
+  if (num === 0) {
+    return '0R'
+  }
+  
   exponent = Math.floor(Math.log10(num) / 3) * 3
   if (exponent < -12) exponent = -12
   if (exponent > 12) exponent = 12
