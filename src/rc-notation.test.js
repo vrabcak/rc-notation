@@ -6,6 +6,7 @@ test('Returns empty string for NaN', () => {
 })
 
 test('Various values of R resistors', () => {
+  expect(toRCNotation(0)).toBe('0R')
   expect(toRCNotation(1)).toBe('1R')
   expect(toRCNotation(1.0)).toBe('1R')
   expect(toRCNotation(1.1)).toBe('1R1')
