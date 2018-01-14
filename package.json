@@ -2,6 +2,7 @@
   "name": "rc-notation",
   "version": "0.1.0",
   "description": "converts values of electronic parts (resistors and capacitors) to IEC 60062 notation (e.g. 1K0, 3p3)",
+  "repository": "github:vrabcak/rc-notation",
   "main": "src/rc-notation.js",
   "scripts": {
     "test": "jest"
