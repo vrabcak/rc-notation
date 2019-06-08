@@ -10,6 +10,6 @@
   "author": "Tomas Tichy <vrabcak@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^22.0.6"
+    "jest": "^24.8.0"
   }
 }
